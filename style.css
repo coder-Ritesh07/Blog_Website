@@ -1,0 +1,2154 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style-type: none;
+  text-decoration: none;
+}
+::selection{
+  background-color: #2fe62b;
+  color: white;
+  mix-blend-mode: difference;
+}
+
+:root {
+  --primary-color: #bcf7ba;
+  --secondary-color: #2fe62b;
+  --font-family: "Poppins", sans-serif;
+}
+/* Real CSS here */
+body {
+  width: 100vw;
+  height: 100vw;
+  background-color: var(--primary-color);
+}
+nav {
+  position: relative;
+  height: 80px;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #2fe62b;
+  box-shadow: 0px 0px 7px black;
+}
+
+
+
+.mobile-nav{
+  position: absolute;
+  width: 100%;
+  height:0;
+  top:100%;
+  left: 0;
+  background-color: rgba(255,255,255,.1);
+  backdrop-filter: blur(50px);
+  overflow: hidden;
+  transition: all .5s linear;
+}
+.links{
+  display: block;
+  text-align: center;
+  margin:4px 0 4px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: black;
+}
+.links:hover{
+  color: white;
+}
+
+
+.main-logo {
+  border: 4px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  width: 80px;
+  height: 70px;
+  margin: 5px 0 0 15px;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  padding-right: 40px;
+}
+.nav-links ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.icon .menu-icon{
+  font-size: 2.1vw;
+  cursor: pointer;
+  font-weight: 600;
+  display: none;
+}
+.icon .close-icon{
+  font-size: 5.7vw;
+  cursor: pointer;
+  font-weight: 600;
+  display: none;
+}
+.menu-icon:hover{
+  color: white;
+}
+.close-icon:hover{
+  color: white;
+}
+#check{
+  display: none;
+}
+ul li a {
+  color: rgb(52, 49, 49);
+  margin-left: 40px;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+ul li a:hover  {
+  color: white;
+}
+ul li a.active{
+  color: white;
+}
+.intro-blogs {
+  width: 100vw;
+  height: 600px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.intro-content {
+  position: relative;
+  max-width: 550px;
+  height: 530px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px black;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(30px);
+  overflow: hidden;
+  transition: transform 0.6s;
+}
+.intro-content:hover{
+    transform: scale(1.02);
+    box-shadow: 0px 0px 10px green;
+}
+.intro-content h1 {
+  text-align: center;
+  font-size: 2.7em;
+  background-color: #2fe62b;
+  color: white;
+  padding: 10px;
+}
+.intro-content p {
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 1.2em;
+  font-weight: 600;
+  padding: 40px 30px 0 30px;
+}
+.intro-content p > strong {
+  font-size: 1.4em;
+}
+.ri-scroll-to-bottom-fill{
+  font-size: 3.5em;
+  position: absolute;
+  bottom:18px;
+  left:45%;
+}
+.effect-1 {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  top: 0px;
+  left: 0px;
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 1) 29%,
+    rgba(98, 236, 95, 1) 87%
+  );
+  animation: rightmove 5s linear infinite;
+}
+@keyframes rightmove {
+    0%{
+        left:-120%;
+    }
+    100%{
+        left:120%;
+    }
+}
+.effect-2 {
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  top: 0px;
+  right: 0px;
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 1) 29%,
+    rgba(98, 236, 95, 1) 87%
+  );
+  animation: downmove 4s linear infinite;
+}
+@keyframes downmove {
+    0%{
+        top:-120%;
+    }
+    100%{
+        top:120%;
+    }
+}
+.effect-3 {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  left: 0px;
+  bottom: 0px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 29%,
+    rgba(98, 236, 95, 1) 87%
+  );
+  animation: leftmove 5s linear infinite;
+}
+@keyframes leftmove {
+    0%{
+        left:120%;
+    }
+    100%{
+        left:-120%;
+    }
+}
+.effect-4{
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    left: 0px;
+    top:0px;
+    background:linear-gradient(to bottom, rgba(255,255,255,1) 29%, rgba(98,236,95,1) 87%);
+    animation: topmove 4s linear infinite;
+}
+@keyframes topmove {
+    0%{
+        top:120%;
+    }
+    100%{
+        top:-120%;
+    }
+}
+
+
+/* main content css part here and blog section css also here */
+main{
+  width: 100vw;
+}
+.blog-section{
+  max-width: 90%;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,1fr);
+  gap:30px;
+}
+.blog1{
+  overflow: hidden;
+  padding:10px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 6px;
+  transition: transform 1s;
+}
+.blog1:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 0px 10px black;
+}
+.blog1-content{
+  position: relative;
+  z-index: 100;
+  letter-spacing: 1px;
+}
+.blog1 h1{
+  width: 121px;
+  height: 120px;
+  text-align: center;
+  border-radius: 100px;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  color: white;
+  transition: all 0.6s;
+}
+
+.blog1:hover h1 {
+  box-shadow: 0px 540px 0 1500px red;
+  transform: rotateZ(360deg) ;
+  background-color: white;
+  color: black;
+}
+.blog1:hover .blog1-content{
+  color:white;
+}
+.blog1-content img{
+  margin-left: 80px;
+}
+.heading{
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 800;
+  font-size: 2em;
+  text-shadow: 0 0 2px black;
+}
+.about-my-heading{
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+.about-assam li{
+  font-size: 1.2em;
+  font-weight: 400;
+  margin:20px 0px;
+}
+/* blog2 css here */
+.blog2{
+  overflow: hidden;
+  padding:10px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 6px;
+  transition: transform 1s;
+}
+.blog2:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 0px 10px black;
+}
+.about-my-thailand
+{
+  font-size: 1em;
+  margin: 20px 0px;
+}
+.blog2-content{
+  position: relative;
+  z-index: 100;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+}
+.blog2 h1{
+  width: 121px;
+  height: 120px;
+  text-align: center;
+  border-radius: 100px;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  color: white;
+  transition: all 0.4s;
+}
+.blog2:hover h1 {
+  box-shadow:0px 540px 0 1500px green;
+  transform: rotatey(360deg) ;
+  background-color: white;
+  color: black;
+}
+.blog2:hover .blog2-content{
+  color:white;
+}
+.blog2-content .video-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  column-gap: 10px;
+  margin: 30px 0px;
+}
+.blog2-content img{
+  margin-left: 80px;
+}
+/* blog3 css here */
+.blog3{
+  overflow: hidden;
+  padding:10px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 6px;
+  transition: transform 1s;
+}
+.blog3:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 0px 10px black;
+}
+.blog3-content{
+  position: relative;
+  z-index: 100;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+}
+.blog3 h1{
+  width: 121px;
+  height: 120px;
+  text-align: center;
+  border-radius: 100px;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+  color: white;
+  transition: all 0.6s;
+}
+.blog3:hover h1 {
+  box-shadow:  0px 540px 0 1500px blue;
+  transform: rotatex(360deg) ;
+  background-color: white;
+  color: black;
+}
+.blog3:hover .blog3-content{
+  color:white;
+}
+.blog3-content img{
+  margin-left: 80px;
+}
+.about-my-bhutan{
+  font-size: 1em;
+  margin: 20px 0px;
+}
+.bhutan-video{
+  margin: 20px 0px;
+  margin-left: 80px;
+}
+
+/* blog4 css here */
+.blog4{
+  overflow: hidden;
+  padding:10px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 6px;
+  transition: transform 1s;
+}
+.blog4:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 0px 10px black;
+}
+.blog4-content{
+  position: relative;
+  z-index: 100;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+}
+.blog4 h1{
+  width: 121px;
+  height: 120px;
+  text-align: center;
+  border-radius: 100px;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(233, 4, 241);
+  color: white;
+  transition: all 0.6s;
+}
+.blog4:hover h1 {
+  box-shadow: 0px 540px 0 1500px rgb(233, 4, 241);
+  transform: rotate(360deg) ;
+  background-color: white;
+  color: black;
+}
+.blog4:hover .blog4-content{
+  color:white;
+}
+.blog4-content img{
+  margin-left: 80px;
+}
+.about-my-darjeeling{
+  font-size: 1em;
+  margin: 20px 0px;
+}
+.darjeeling-video{
+  margin: 20px 0px;
+  margin-left: 80px;
+}
+
+
+/* About me css here */
+.aboutme-container{
+  max-width: 90%;
+  margin: 60px auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.about-me-box
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  column-gap: 5vw;
+}
+.aboutme-container h1{
+  text-align: center;
+  color: #2fe62b;
+  font-size: 2.5em;
+  font-weight: 800;
+  margin-bottom: 30px;
+  letter-spacing: 1.5px;
+}
+.aboutme-content{
+  max-width: 600px;
+  font-size: 1.2em;
+  letter-spacing: 1.3px;
+  font-weight: 500;
+}
+.aboutme-content strong{
+  color: var(--secondary-color);
+  text-shadow: 0 0 3px white;
+}
+.aboutme-content p:nth-child(2)
+{
+  margin-top: 5px;
+}
+
+/* Contact Me CSS here */
+.input-field-margin{
+  margin-left: 110px;
+}
+.contactme-container{
+  max-width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.contactme-container h1{
+  text-align: center;
+  color: #2fe62b;
+  font-size: 2.5em;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+.contact-form{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+}
+.form-label{
+  display: inline-block;
+  font-size: 1.3em;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.form-fields{
+  display: inline-block;
+  font-size: 1.2em;
+  font-weight: 500;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  height: 30px;
+  width: 300px;
+}
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border: none;
+  box-shadow: 0 0 3px green;
+}
+input::placeholder {
+  font-size: 16px; 
+  color: #ccc; 
+  padding-left: 3px;
+}
+
+.gender{
+  margin-left: 10px;
+}
+textarea{
+  width: 300px;
+  border: none;
+  resize: none;
+  overflow: scroll;
+}
+.check-box-field{
+  text-align: center;
+}
+.textarea{
+  margin-bottom: -10px;
+  margin-left: 140px;
+}
+.checkbox::before{
+  content: "*";
+  color: red;
+}
+
+.real-checkbox{
+  width: 41px;
+  display: inline-block;
+  height: 15px;
+  margin-right: -10px;
+  margin-top: 30px;
+}
+.button-area{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.button{
+  border: none;
+  height: 50px;
+  width: 100px;
+  font-size: 1.2em;
+  font-weight: 600;
+  border-radius: 3px;
+  color: white;
+  background-color: #2fe62b;
+}
+/* Footer css here */
+footer{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  overflow: hidden;
+}
+.sub-footer{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between ;
+  align-items: end;
+  padding: 10px 20px;
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  left: 0px;
+  bottom: 0px;
+  background-color: rgb(57, 56, 56);
+}
+.social-icons{
+   font-size: 2em;
+   color: white;
+   margin-left: 10px;
+}
+.social-icons:hover{
+  color: var(--secondary-color);
+}
+.social-links{
+  display: flex;
+  flex-direction: row;
+}
+.copy-right p{
+  letter-spacing: 1px;
+}
+
+
+
+/* Break Points between 600px t0 768px in tablets */
+@media (min-width:600px) and (max-width:768px) {
+  /* header and nav responsive section here */
+  .icon .menu-icon{
+    display: block;
+    font-size: 2.4rem;
+  }
+  nav{
+    width: 100%;
+    position: relative;
+  }
+  .nav-links ul li{
+    display: none;
+  }
+  #check:checked~.icon .menu-icon
+  {
+    display: none;
+  }
+  #check:checked~.icon .close-icon
+  {
+    display: block;
+  }
+  #check:checked~.mobile-nav{
+    height: 14.3rem;
+  }
+  .intro-blogs{
+    display: flex;
+    flex-direction: column;
+  }
+  .aboutus{
+    height: 320px;
+    width: 350px;
+  }
+.intro-blogs{
+  height: 100%;
+}
+.intro-content{
+  height: 400px;
+}
+.intro-content p {
+  font-size: 1em;
+}
+.ri-scroll-to-bottom-fill{
+  display: none;
+}
+/* blogs section */
+  .blog-section{
+    max-width: 90%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap:30px;
+  }
+  .mobile-screen-navbar  a[href="#place1"]:active  .blog1 h1 {
+    box-shadow: 0px 540px 0 1500px red;
+    transform: rotateZ(360deg);
+    background-color: white;
+    color: black;
+  }
+  .mobile-screen-navbar  a[href="#place2"]:active  .blog2 h1 {
+    box-shadow:0px 540px 0 1500px green;
+    transform: rotateZ(360deg);
+    background-color: white;
+    color: black;
+  }
+  .mobile-screen-navbar  a[href="#place3"]:active  .blog3 h1 {
+    box-shadow:  0px 540px 0 1500px blue;
+    transform: rotateZ(360deg);
+    background-color: white;
+    color: black;
+  }
+  .mobile-screen-navbar a[href="#place4"]:active  .blog4 h1 {
+    box-shadow: 0px 540px 0 1500px rgb(233, 4, 241);
+    transform: rotateZ(360deg);
+    background-color: white;
+    color: black;
+  }
+/* about me section */
+  .about-me-box
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.aboutme-img{
+  height: 350px;
+  width: 400px;
+}
+.aboutme-content{
+  width: 530px;
+}
+/* contact me section */
+.contact-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.field-set-mobile{
+  display: flex;
+  flex-direction: row;
+}
+.main-contactme-img{
+  height: 300px;
+}
+.email-text-box{
+  margin-left: 106px;
+}
+.gender{
+  margin: 9px 6px 28px 4px;
+}
+/* Footer section */
+.social-icons{
+  font-size: 1.2em;
+}
+.copy-right p{
+  font-size: 0.8em;
+}
+}
+
+
+@media (max-width: 320px) {
+  .icon .menu-icon{
+    display: block;
+    font-size: 2.4rem;
+  }
+  nav{
+    width: 100%;
+    position: relative;
+  }
+  .nav-links ul li{
+    display: none;
+  }
+  #check:checked~.icon .menu-icon
+  {
+    display: none;
+  }
+  #check:checked~.icon .close-icon
+  {
+    display: block;
+  }
+  #check:checked~.mobile-nav{
+    height: 14.3rem;
+  }
+  .intro-blogs{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .aboutus{
+    height: 300px;
+    width: 280px;
+  }
+.intro-content{
+  width: 300px;
+  height: 450px;
+  
+}
+.intro-content h1{
+  font-size: 2em;
+}
+.intro-content p {
+  font-size: 0.8em;
+}
+.ri-scroll-to-bottom-fill{
+  display: none;
+}
+
+/* blog sections */
+.blog-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center; ;
+}
+.mobile-screen-navbar  a[href="#place1"]:active  .blog1 h1 {
+  box-shadow: 0px 540px 0 1500px red;
+  transform: rotateZ(360deg);
+  background-color: white;
+  color: black;
+}
+.mobile-screen-navbar  a[href="#place2"]:active  .blog2 h1 {
+  box-shadow:0px 540px 0 1500px green;
+  transform: rotateZ(360deg);
+  background-color: white;
+  color: black;
+}
+.mobile-screen-navbar  a[href="#place3"]:active  .blog3 h1 {
+  box-shadow:  0px 540px 0 1500px blue;
+  transform: rotateZ(360deg);
+  background-color: white;
+  color: black;
+}
+.mobile-screen-navbar a[href="#place4"]:active  .blog4 h1 {
+  box-shadow: 0px 540px 0 1500px rgb(233, 4, 241);
+  transform: rotateZ(360deg);
+  background-color: white;
+  color: black;
+}
+/* blog1 here */
+.blog1{
+  width: 100%;
+}
+.blog1-content img{
+  margin-left: 0px;
+}
+.assam-img{
+  width: 230px;
+}
+.heading{
+  font-size: 1.3em;
+}
+.about-my-heading{
+  font-size: 0.8em;
+  width: 100%;
+}
+.blog1-content{
+  width:100%;
+}
+.blog1-about-assam li{
+  font-size: 0.8em;
+  margin: 10px 0px;
+}
+.blog1-about-assam ol{
+  width: 300px;
+}
+.assam-video{
+  width: 200px;
+  height: 200px;
+  margin-left: 10px;
+}
+
+/* blog2 here */
+.blog2{
+  width: 100%;
+}
+.blog2-content img{
+  margin-left: 0px;
+}
+.thailand-img{
+  width: 230px;
+}
+.heading{
+  font-size: 1.3em;
+}
+.about-my-thailand{
+  font-size: 0.8em;
+  width: 100%;
+}
+.blog2-content{
+  width:100%;
+}
+.blog2-about-thailand li{
+  font-size: 0.8em;
+  margin: 10px 0px;
+}
+.blog2-about-thailand ol{
+  width: 300px;
+}
+.blog2-footer{
+font-size: 0.8em;
+
+}
+.thailand-video{
+  width: 150px;
+  height: 230px;
+}
+
+/* blog3 section here */
+.blog3{
+  width: 100%;
+}
+.blog3-content img{
+  margin-left: 0px;
+}
+.bhutan-img{
+  width: 230px;
+}
+.heading{
+  font-size: 1.3em;
+}
+.about-my-bhutan{
+  font-size: 0.8em;
+  width: 100%;
+}
+.blog3-content{
+  width:100%;
+}
+.blog3-about-bhutan li{
+  font-size: 0.8em;
+  margin: 10px 0px;
+}
+.blog3-about-bhutan ol{
+  width: 300px;
+}
+.bhutan-video{
+  margin-top: -30px;
+  width: 230px;
+  height: 300px;
+  margin:-30px 10px 0px auto;
+}
+.blog3-footer{
+  font-size: 0.8em;
+}
+/* blog4 section here */
+.blog4{
+  width: 100%;
+}
+.blog4-content img{
+  margin-left: 0px;
+}
+.darjeeling-img{
+  width: 200px;
+}
+.heading{
+  font-size: 1.3em;
+}
+.about-my-darjeeling{
+  font-size: 0.8em;
+  width: 100%;
+}
+.blog4-content{
+  width:100%;
+}
+.blog4-about-darjeeling li{
+  font-size: 0.8em;
+  margin: 10px 0px;
+}
+.blog4-about-darjeeling ol{
+  width: 300px;
+}
+.darjeeling-video{
+  margin-top: -10px;
+  width: 230px;
+  height: 200px;
+  margin-left: 10px;
+}
+.blog4-footer{
+  font-size: 0.8em;
+  margin:-10px auto 0px auto;
+}
+
+/* about me section */
+.aboutme-container{
+margin: 30px auto;
+}
+.aboutme-container h1{
+ font-size: 2em;
+}
+.about-me-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.aboutme-img{
+  width: 200px;
+  height: 200px;
+}
+.aboutme-content p{
+  font-size: 0.7em;
+}
+
+/* contact me section */
+
+.contactme-container{
+margin: 30px auto;
+
+}
+.contactme-container h1{
+font-size: 2em;
+}
+.main-contactme-img{
+width: 200px;
+height: 200px;
+}
+.contact-form{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.form-label{
+font-size: 0.8em;
+
+}
+.form-fields{
+width: 200px;
+height: 20px;
+font-size: 0.8em;
+padding-left: 4px;
+}
+input::placeholder{
+font-size: 1em;
+}
+.input-field-margin
+{
+margin-left: 30px;
+}
+.field-set-mobile{
+display: flex;
+flex-direction: row;
+justify-content: center;
+}
+.textarea {
+margin-bottom: 0px;
+margin-left: 40px;
+width: 200px;
+}
+.button-area{
+margin-top: 10px;
+}
+.button{
+font-size: 0.9em;
+width: 90px;
+height: 30px;
+}
+.gender{
+margin: 0 4px 20px 8px;
+}
+/* footer section here */
+
+.sub-footer{
+padding:5px 10px;
+}
+.social-icons{
+font-size: 1em;
+}
+.copy-right p{
+font-size: 0.58em;
+letter-spacing: 0;
+}
+}
+
+
+
+
+
+
+/* Small Mobile Phones Between 320px to 375px */
+@media (min-width: 320px) and (max-width: 375px) {
+  .icon .menu-icon{
+    display: block;
+    font-size: 2.4rem;
+  }
+  nav{
+    width: 100%;
+    position: relative;
+  }
+  .nav-links ul li{
+    display: none;
+  }
+  #check:checked~.icon .menu-icon
+  {
+    display: none;
+  }
+  #check:checked~.icon .close-icon
+  {
+    display: block;
+  }
+  #check:checked~.mobile-nav{
+    height: 14.3rem;
+  }
+  .intro-blogs{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .aboutus{
+    height: 320px;
+    width: 310px;
+  }
+.intro-content{
+  width: 300px;
+  height: 440px;
+}
+.intro-content h1{
+  font-size: 2em;
+}
+.intro-content p {
+  font-size: 0.8em;
+}
+.ri-scroll-to-bottom-fill{
+  display: none;
+}
+
+/* blog sections */
+.blog-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center; ;
+}
+.mobile-screen-navbar  a[href="#place1"]:active  .blog1 h1 {
+  box-shadow: 0px 540px 0 1500px red;
+  transform: rotateZ(360deg);
+  background-color: white;
+  color: black;
+}
+.mobile-screen-navbar  a[href="#place2"]:active  .blog2 h1 {
+  box-shadow:0px 540px 0 1500px green;
+  transform: rotateZ(360deg);
+  background-color: white;
+  color: black;
+}
+.mobile-screen-navbar  a[href="#place3"]:active  .blog3 h1 {
+  box-shadow:  0px 540px 0 1500px blue;
+  transform: rotateZ(360deg);
+  background-color: white;
+  color: black;
+}
+.mobile-screen-navbar a[href="#place4"]:active  .blog4 h1 {
+  box-shadow: 0px 540px 0 1500px rgb(233, 4, 241);
+  transform: rotateZ(360deg);
+  background-color: white;
+  color: black;
+}
+/* blog1 here */
+.blog1{
+  width: 100%;
+}
+.blog1-content img{
+  margin-left: 0px;
+}
+.assam-img{
+  width: 230px;
+}
+.heading{
+  font-size: 1.3em;
+}
+.about-my-heading{
+  font-size: 0.8em;
+  width: 100%;
+}
+.blog1-content{
+  width:100%;
+}
+.blog1-about-assam li{
+  font-size: 0.8em;
+  margin: 10px 0px;
+}
+.blog1-about-assam ol{
+  width: 300px;
+}
+.assam-video{
+  width: 200px;
+  height: 250px;
+  margin-left: 10px;
+}
+
+/* blog2 here */
+.blog2{
+  width: 100%;
+}
+.blog2-content img{
+  margin-left: 0px;
+}
+.thailand-img{
+  width: 230px;
+}
+.heading{
+  font-size: 1.3em;
+}
+.about-my-thailand{
+  font-size: 0.8em;
+  width: 100%;
+}
+.blog2-content{
+  width:100%;
+}
+.blog2-about-thailand li{
+  font-size: 0.8em;
+  margin: 10px 0px;
+}
+.blog2-about-thailand ol{
+  width: 300px;
+}
+.blog2-footer{
+font-size: 0.8em;
+
+}
+.thailand-video{
+  width: 123px;
+  height: 230px;
+  margin-left: -5px;
+}
+
+/* blog3 section here */
+.blog3{
+  width: 100%;
+}
+.blog3-content img{
+  margin-left: 0px;
+}
+.bhutan-img{
+  width: 230px;
+}
+.heading{
+  font-size: 1.3em;
+}
+.about-my-bhutan{
+  font-size: 0.8em;
+  width: 100%;
+}
+.blog3-content{
+  width:100%;
+}
+.blog3-about-bhutan li{
+  font-size: 0.8em;
+  margin: 10px 0px;
+}
+.blog3-about-bhutan ol{
+  width: 300px;
+}
+.bhutan-video{
+  width: 250px;
+  height: 280px;
+  margin:-50px auto 0px auto;
+}
+.blog3-footer{
+  font-size: 0.8em;
+}
+/* blog4 section here */
+.blog4{
+  width: 100%;
+}
+.blog4-content img{
+  margin-left: 0px;
+}
+.darjeeling-img{
+  width: 230px;
+}
+.heading{
+  font-size: 1.3em;
+}
+.about-my-darjeeling{
+  font-size: 0.8em;
+  width: 100%;
+}
+.blog4-content{
+  width:100%;
+}
+.blog4-about-darjeeling li{
+  font-size: 0.8em;
+  margin: 10px 0px;
+}
+.blog4-about-darjeeling ol{
+  width: 300px;
+}
+.darjeeling-video{
+  margin-top: -20px;
+  width: 230px;
+  height: 200px;
+  margin-left: 10px;
+}
+.blog4-footer{
+  font-size: 0.8em;
+  margin:-10px auto 0px auto;
+}
+
+/* about me section */
+.aboutme-container{
+margin: 30px auto;
+}
+.aboutme-container h1{
+ font-size: 2em;
+}
+.about-me-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.aboutme-img{
+  width: 200px;
+  height: 200px;
+}
+.aboutme-content p{
+  font-size: 0.7em;
+}
+
+/* contact me section */
+.contactme-container{
+margin: 30px auto;
+}
+.contactme-container h1{
+font-size: 2em;
+}
+.main-contactme-img{
+width: 200px;
+height: 200px;
+}
+.contact-form{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.form-label{
+font-size: 0.8em;
+
+}
+.form-fields{
+width: 200px;
+height: 20px;
+font-size: 0.8em;
+padding-left: 4px;
+}
+input::placeholder{
+font-size: 1em;
+}
+.input-field-margin
+{
+margin-left: 30px;
+}
+.field-set-mobile{
+display: flex;
+flex-direction: row;
+justify-content: center;
+}
+.textarea {
+margin-bottom: 0px;
+margin-left: 40px;
+width: 200px;
+}
+.button-area{
+margin-top: 10px;
+}
+.button{
+font-size: 0.9em;
+width: 90px;
+height: 40px;
+}
+.gender{
+margin: 0 4px 20px 8px;
+}
+/* footer section here */
+.sub-footer{
+padding:5px 1px;
+}
+.social-icons{
+font-size: 1.1em;
+margin-left: 5px;
+}
+.copy-right p{
+font-size: 0.68em;
+letter-spacing: 0;
+}
+}
+
+
+
+/* break point between medium mobils(375px) to large mobils(425px) */
+  @media (min-width: 375px) and (max-width: 425px) {
+    .icon .menu-icon{
+      display: block;
+      font-size: 2.4rem;
+    }
+    nav{
+      width: 100%;
+      position: relative;
+    }
+    .nav-links ul li{
+      display: none;
+    }
+    #check:checked~.icon .menu-icon
+    {
+      display: none;
+    }
+    #check:checked~.icon .close-icon
+    {
+      display: block;
+    }
+    #check:checked~.mobile-nav{
+      height: 14.3rem;
+    }
+    .intro-blogs{
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .aboutus{
+      height: 320px;
+      width: 350px;
+    }
+  .intro-content{
+    width: 340px;
+    height: 400px;
+  }
+  .intro-content h1{
+    font-size: 2em;
+  }
+  .intro-content p {
+    font-size: 0.8em;
+  }
+  .ri-scroll-to-bottom-fill{
+    display: none;
+  }
+
+  /* blog sections */
+  .blog-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center; ;
+  }
+  .mobile-screen-navbar  a[href="#place1"]:active  .blog1 h1 {
+    box-shadow: 0px 540px 0 1500px red;
+    transform: rotateZ(360deg);
+    background-color: white;
+    color: black;
+  }
+  .mobile-screen-navbar  a[href="#place2"]:active  .blog2 h1 {
+    box-shadow:0px 540px 0 1500px green;
+    transform: rotateZ(360deg);
+    background-color: white;
+    color: black;
+  }
+  .mobile-screen-navbar  a[href="#place3"]:active  .blog3 h1 {
+    box-shadow:  0px 540px 0 1500px blue;
+    transform: rotateZ(360deg);
+    background-color: white;
+    color: black;
+  }
+  .mobile-screen-navbar a[href="#place4"]:active  .blog4 h1 {
+    box-shadow: 0px 540px 0 1500px rgb(233, 4, 241);
+    transform: rotateZ(360deg);
+    background-color: white;
+    color: black;
+  }
+  /* blog1 here */
+  .blog1{
+    width: 100%;
+  }
+  .blog1-content img{
+    margin-left: 20px;
+  }
+  .assam-img{
+    width: 250px;
+  }
+  .heading{
+    font-size: 1.3em;
+  }
+  .about-my-heading{
+    font-size: 0.8em;
+    width: 100%;
+  }
+  .blog1-content{
+    width:100%;
+  }
+  .blog1-about-assam li{
+    font-size: 0.8em;
+    margin: 10px 0px;
+  }
+  .blog1-about-assam ol{
+    width: 300px;
+  }
+  .assam-video{
+    width: 200px;
+    height: 250px;
+    margin-left: 40px;
+  }
+
+/* blog2 here */
+  .blog2{
+    width: 100%;
+  }
+  .blog2-content img{
+    margin-left: 20px;
+  }
+  .thailand-img{
+    width: 250px;
+  }
+  .heading{
+    font-size: 1.3em;
+  }
+  .about-my-thailand{
+    font-size: 0.8em;
+    width: 100%;
+  }
+  .blog2-content{
+    width:100%;
+  }
+  .blog2-about-thailand li{
+    font-size: 0.8em;
+    margin: 10px 0px;
+  }
+  .blog2-about-thailand ol{
+    width: 300px;
+  }
+  .blog2-footer{
+  font-size: 0.8em;
+
+}
+  .thailand-video{
+    width: 200px;
+    height: 250px;
+  }
+
+/* blog3 section here */
+  .blog3{
+    width: 100%;
+  }
+  .blog3-content img{
+    margin-left: 20px;
+  }
+  .bhutan-img{
+    width: 250px;
+  }
+  .heading{
+    font-size: 1.3em;
+  }
+  .about-my-bhutan{
+    font-size: 0.8em;
+    width: 100%;
+  }
+  .blog3-content{
+    width:100%;
+  }
+  .blog3-about-bhutan li{
+    font-size: 0.8em;
+    margin: 10px 0px;
+  }
+  .blog3-about-bhutan ol{
+    width: 300px;
+  }
+  .bhutan-video{
+    margin-top: -50px;
+    width: 250px;
+    height: 300px;
+    margin:-50px auto 0px auto;
+  }
+  .blog3-footer{
+    font-size: 0.8em;
+  }
+/* blog4 section here */
+  .blog4{
+    width: 100%;
+  }
+  .blog4-content img{
+    margin-left: 20px;
+  }
+  .darjeeling-img{
+    width: 250px;
+  }
+  .heading{
+    font-size: 1.3em;
+  }
+  .about-my-darjeeling{
+    font-size: 0.8em;
+    width: 100%;
+  }
+  .blog4-content{
+    width:100%;
+  }
+  .blog4-about-darjeeling li{
+    font-size: 0.8em;
+    margin: 10px 0px;
+  }
+  .blog4-about-darjeeling ol{
+    width: 300px;
+  }
+  .darjeeling-video{
+    margin-top: -50px;
+    width: 300px;
+    height: 300px;
+    margin-left: 10px;
+  }
+  .blog4-footer{
+    font-size: 0.8em;
+    margin:-10px auto 0px auto;
+  }
+
+/* about me section */
+.aboutme-container{
+  margin: 30px auto;
+}
+.aboutme-container h1{
+   font-size: 2em;
+}
+  .about-me-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .aboutme-img{
+    width: 200px;
+    height: 200px;
+  }
+  .aboutme-content p{
+    font-size: 0.7em;
+  }
+
+/* contact me section */
+.contactme-container{
+  margin: 30px auto;
+}
+.contactme-container h1{
+  font-size: 2em;
+}
+.main-contactme-img{
+  width: 200px;
+  height: 200px;
+}
+.contact-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-label{
+  font-size: 0.8em;
+  
+}
+.form-fields{
+  width: 200px;
+  height: 20px;
+  font-size: 0.8em;
+  padding-left: 4px;
+}
+input::placeholder{
+  font-size: 1em;
+}
+.input-field-margin
+{
+  margin-left: 60px;
+}
+.field-set-mobile{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.textarea {
+  margin-bottom: 0px;
+  margin-left: 70px;
+  width: 200px;
+}
+.button-area{
+  margin-top: 10px;
+}
+.button{
+  font-size: 0.9em;
+  width: 90px;
+  height: 30px;
+}
+.gender{
+  margin: 0 4px 20px 8px;
+}
+/* footer section here */
+.sub-footer{
+  padding:5px 10px;
+}
+.social-icons{
+  font-size: 1.2em;
+}
+.copy-right p{
+  font-size: 0.8em;
+  letter-spacing: 0;
+}
+  }
+
+/* media query between 425px to 600px */
+  @media (min-width: 425px) and (max-width: 600px) {
+    /* Your styles here */
+    .icon .menu-icon{
+      display: block;
+      font-size: 2.4rem;
+    }
+    nav{
+      width: 100%;
+      position: relative;
+    }
+    .nav-links ul li{
+      display: none;
+    }
+    #check:checked~.icon .menu-icon
+    {
+      display: none;
+    }
+    #check:checked~.icon .close-icon
+    {
+      display: block;
+    }
+    #check:checked~.mobile-nav{
+      height: 14.3rem;
+    }
+    .intro-blogs{
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .aboutus{
+      height: 320px;
+      width: 350px;
+    }
+  .intro-content{
+    width: 380px;
+    height: 380px;
+  }
+  .intro-content h1{
+    font-size: 2em;
+  }
+  .intro-content p {
+    font-size: 0.8em;
+  }
+  .ri-scroll-to-bottom-fill{
+    display: none;
+  }
+
+  /* blog sections */
+  .blog-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center; ;
+  }
+  .mobile-screen-navbar  a[href="#place1"]:active  .blog1 h1 {
+    box-shadow: 0px 540px 0 1500px red;
+    transform: rotateZ(360deg);
+    background-color: white;
+    color: black;
+  }
+  .mobile-screen-navbar  a[href="#place2"]:active  .blog2 h1 {
+    box-shadow:0px 540px 0 1500px green;
+    transform: rotateZ(360deg);
+    background-color: white;
+    color: black;
+  }
+  .mobile-screen-navbar  a[href="#place3"]:active  .blog3 h1 {
+    box-shadow:  0px 540px 0 1500px blue;
+    transform: rotateZ(360deg);
+    background-color: white;
+    color: black;
+  }
+  .mobile-screen-navbar a[href="#place4"]:active  .blog4 h1 {
+    box-shadow: 0px 540px 0 1500px rgb(233, 4, 241);
+    transform: rotateZ(360deg);
+    background-color: white;
+    color: black;
+  }
+  /* blog1 here */
+  .blog1{
+    width: 100%;
+  }
+  .blog1-content img{
+    margin-left: 20px;
+  }
+  .assam-img{
+    width: 250px;
+  }
+  .heading{
+    font-size: 1.3em;
+  }
+  .about-my-heading{
+    font-size: 0.8em;
+    width: 100%;
+  }
+  .blog1-content{
+    width:100%;
+  }
+  .blog1-about-assam li{
+    font-size: 0.8em;
+    margin: 10px 0px;
+  }
+  .blog1-about-assam ol{
+    width: 300px;
+  }
+  .assam-video{
+    width: 200px;
+    height: 250px;
+    margin-left: 40px;
+  }
+
+/* blog2 here */
+  .blog2{
+    width: 100%;
+  }
+  .blog2-content img{
+    margin-left: 20px;
+  }
+  .thailand-img{
+    width: 250px;
+  }
+  .heading{
+    font-size: 1.3em;
+  }
+  .about-my-thailand{
+    font-size: 0.8em;
+    width: 100%;
+  }
+  .blog2-content{
+    width:100%;
+  }
+  .blog2-about-thailand li{
+    font-size: 0.8em;
+    margin: 10px 0px;
+  }
+  .blog2-about-thailand ol{
+    width: 300px;
+  }
+  .blog2-footer{
+  font-size: 0.8em;
+
+}
+  .thailand-video{
+    width: 200px;
+    height: 250px;
+  }
+
+/* blog3 section here */
+  .blog3{
+    width: 100%;
+  }
+  .blog3-content img{
+    margin-left: 20px;
+  }
+  .bhutan-img{
+    width: 250px;
+  }
+  .heading{
+    font-size: 1.3em;
+  }
+  .about-my-bhutan{
+    font-size: 0.8em;
+    width: 100%;
+  }
+  .blog3-content{
+    width:100%;
+  }
+  .blog3-about-bhutan li{
+    font-size: 0.8em;
+    margin: 10px 0px;
+  }
+  .blog3-about-bhutan ol{
+    width: 300px;
+  }
+  .bhutan-video{
+    margin-top: -50px;
+    width: 250px;
+    height: 300px;
+    margin:-50px auto 0px auto;
+  }
+  .blog3-footer{
+    font-size: 0.8em;
+  }
+/* blog4 section here */
+  .blog4{
+    width: 100%;
+  }
+  .blog4-content img{
+    margin-left: 20px;
+  }
+  .darjeeling-img{
+    width: 250px;
+  }
+  .heading{
+    font-size: 1.3em;
+  }
+  .about-my-darjeeling{
+    font-size: 0.8em;
+    width: 100%;
+  }
+  .blog4-content{
+    width:100%;
+  }
+  .blog4-about-darjeeling li{
+    font-size: 0.8em;
+    margin: 10px 0px;
+  }
+  .blog4-about-darjeeling ol{
+    width: 300px;
+  }
+  .darjeeling-video{
+    margin-top: -50px;
+    width: 300px;
+    height: 300px;
+    margin-left: 10px;
+  }
+  .blog4-footer{
+    font-size: 0.8em;
+    margin:-10px auto 0px auto;
+  }
+
+/* about me section */
+.aboutme-container{
+  margin: 30px auto;
+}
+.aboutme-container h1{
+   font-size: 2em;
+}
+  .about-me-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .aboutme-img{
+    width: 200px;
+    height: 200px;
+  }
+  .aboutme-content p{
+    font-size: 0.7em;
+  }
+
+/* contact me section */
+.contactme-container{
+  margin: 30px auto;
+}
+.contactme-container h1{
+  font-size: 2em;
+}
+.main-contactme-img{
+  width: 200px;
+  height: 200px;
+}
+.contact-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-label{
+  font-size: 0.8em;
+  
+}
+.form-fields{
+  width: 200px;
+  height: 20px;
+  font-size: 0.8em;
+  padding-left: 4px;
+}
+input::placeholder{
+  font-size: 1em;
+}
+.input-field-margin
+{
+  margin-left: 60px;
+}
+.field-set-mobile{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.textarea {
+  margin-bottom: 0px;
+  margin-left: 70px;
+  width: 200px;
+}
+.button-area{
+  margin-top: 10px;
+}
+.button{
+  font-size: 0.9em;
+  width: 90px;
+  height: 30px;
+}
+.gender{
+  margin: 0 4px 20px 8px;
+}
+/* footer section here */
+.sub-footer{
+  padding:5px 10px;
+}
+.social-icons{
+  font-size: 1.2em;
+}
+.copy-right p{
+  font-size: 0.9em;
+  letter-spacing: 0;
+}
+  }
+
+/* LAPTOP Screen size between 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px){
+  .nav-links {
+    padding-right: 10px;
+  }
+  .nav-links ul li:nth-child(7)
+  {
+    padding-right: 15px;
+  }
+  ul li a{
+    margin-left: 25px;
+    font-size: 1.1em;
+    font-weight: 600;
+  }
+  .aboutus{
+    width:350px;
+    height: 350px;
+  }
+  /* blog1 section here */
+  .blog1-content  img{
+    margin-left: 20px;
+    width: 300px;
+    height: 250px;
+  }
+  .about-my-heading{
+    font-size: 1.1em;
+  }
+  .assam-video{
+    width: 330px;
+    height: 300px;
+    margin-top: 20px;
+  }
+
+  /* blog2 section here */
+  .blog2-content img{
+    margin-left: 30px;
+    width: 300px;
+    height: 250px;
+  }
+  .blog2-about-thailand li{
+    font-size: 0.9em;
+  }
+  .about-my-thailand{
+    font-size: 0.9em;
+  }
+  .thailand-video{
+    width:200px;
+    height: 250px;
+  }
+  .blog2-footer{
+    font-size: 0.9em;
+  }
+  
+  /* blog3 section here */
+  .blog3-content img{
+    margin-left: 30px;
+  }
+  .bhutan-img{
+    width: 300px;
+    height: 250px;
+  }
+  .bhutan-video{
+    margin-left: 30px;
+    width:300px;
+    height: 200px;
+  }
+  .about-my-bhutan{
+    font-size: 0.9em;
+  }
+  .blog3-about-bhutan{
+    font-size: 0.9em;
+  }
+  .blog3-footer{
+    font-size: 0.9em;
+  }
+  /* blog4 section here */
+
+   .blog4-content img{
+    margin-left: 40px;
+   }
+   .darjeeling-img{
+    width: 300px;
+    height: 250px;
+   }
+   .darjeeling-video{
+    width: 300px;
+    height: 250px;
+    margin-left: 30px;
+   }
+   .about-my-darjeeling{
+    font-size: 0.9em;
+   }
+   .blog4-about-darjeeling{
+    font-size: 0.9em;
+   }
+   .blog4-footer{
+      font-size: 0.9em;
+   }
+   /* aboutme section */
+   .aboutme-img{
+    width: 400px;
+   }
+
+   /*contact me section  */
+   .main-contactme-img{
+    width: 300px;
+    height: 280px;
+   }
+   .contact-form{
+    display: flex;
+    flex-direction: column;
+   }
+   /* footer section */
+   .sub-footer{
+    padding: 5px 10px;
+   }
+   .social-icons{
+     font-size: 1.8em;
+   }
+}
+ 
